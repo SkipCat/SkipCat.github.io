@@ -1,0 +1,16 @@
+{
+  "name": "skipcat.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkipCat/skipcat.github.io.git"
+  },
+  "author": "Cécile Huguet",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
