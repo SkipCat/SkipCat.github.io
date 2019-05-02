@@ -5,45 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cécile Huguet | Full-stack developer</title>
-  <link href="css/main.css" rel="stylesheet">
+  <link href="assets/main.css" rel="stylesheet">
 </head>
 <body>
-  <div class="section">
-    <p class="title">Cécile Huguet</p>
-    <div class="separator"></div>
-    <p class="subtitle">full-stack web & mobile JS developer</p>
-  </div>
+  <header>
+    <nav>
+      <a href="assets/cv.pdf" target="_blank" class="btn small-btn">
+        See resume
+      </a>
+      <a href="#about">About</a>
+      <a href="#works">Works</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <div class="section">
+      <h1>Cécile Huguet</h1>
+      <div class="separator"></div>
+      <h2 class="subtitle">Full-Stack Web & Mobile JS Developer</h2>
+    </div>
+  </header>
   <main>
-    <div class="section colored-section">
+    <div class="section colored-section" id="about">
       <div class="section-content">
-        <p class="section-title">About me</p>
-        <div class="text-wrapper">
-          <p>
-            I am a third-year student in development.
-            I have helped develop many projects, including for companies.
-            I am enthusiastic, very curious and perpetually working on improving my skills.
-          </p>
-          <br />
-          <p>
-            Besides development, I am a big fan of the Japanese culture,
-            I read manga and heroic fantasy, and I also sing and dance.
-          </p>
-        </div>
+        <h3>About me</h3>
+        <p>
+          I am a third-year student in development.
+          I have helped develop many projects, including for companies.
+          I am enthusiastic, very curious and perpetually working on improving my skills.
+        </p>
+        <br />
+        <p>
+          Besides development, I am a big fan of the Japanese culture,
+          I read manga and heroic fantasy, and I also sing and dance.
+        </p>
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="works">
       <div class="section-content">
-        <p class="section-title">My work</p>
-        <a href="https://github.com/SkipCat" target="_blank">
-          <div class="button">
-            <p>See more on GitHub</p>
-          </div>
+        <h3>My works</h3>
+        <a href="https://github.com/SkipCat" target="_blank" class="btn">
+          See more on GitHub
         </a>
       </div>
     </div>
-    <div class="section">
+    <div class="row-separator"></div>
+    <div class="section" id="skills">
       <div class="section-content">
-        <p class="section-title">My skills</p>
+        <h3>My skills</h3>
+        <h4>Technologies</h4>
         <ul>
           <li>
             <p>JavaScript</p>
@@ -76,15 +84,13 @@
             <p>Swift</p>
           </li>
         </ul>
+        <h4>Dev tools</h4>
         <ul>
           <li>
             <p>Visual Studio Code</p>
           </li>
           <li>
             <p>Terminal</p>
-          </li>
-          <li>
-            <p>Git</p>
           </li>
           <li>
             <p>GitHub</p>
@@ -102,26 +108,28 @@
             <p>Jira</p>
           </li>
         </ul>
+        <a href="https://www.linkedin.com/in/cecile-huguet/" target="_blank" class="btn">
+          See more on LinkedIn
+        </a>
       </div>
     </div>
   </main>
   <footer>
-    <p class="section-title">Contact me</p>
     <div class="row">
-      <a href="https://github.com/SkipCat" target="_blank" class="icon-circle">
-        <img src="icons/github.svg" class="icon" />
+      <a href="https://github.com/SkipCat" target="_blank" class="icon-wrapper">
+        <img src="assets/icons/github.svg" class="icon" />
       </a>
-      <a href="https://twitter.com/Cecile_Huguet" target="_blank" class="icon-circle">
-        <img src="icons/twitter.svg" class="icon" />
+      <a href="https://twitter.com/Cecile_Huguet" target="_blank" class="icon-wrapper">
+        <img src="assets/icons/twitter.svg" class="icon" />
       </a>
-      <a href="https://www.linkedin.com/in/cecile-huguet/" target="_blank" class="icon-circle">
-        <img src="icons/linkedin.svg" class="icon" />
+      <a href="https://www.linkedin.com/in/cecile-huguet/" target="_blank" class="icon-wrapper">
+        <img src="assets/icons/linkedin.svg" class="icon" />
       </a>
-      <a href="mailto:cecilehuguet.contact@gmail.com" target="_blank" class="icon-circle">
-        <img src="icons/email.svg" class="icon" />
+      <a href="mailto:cecilehuguet.contact@gmail.com" target="_blank" class="icon-wrapper">
+        <img src="assets/icons/email.svg" class="icon" />
       </a>
     </div>
-    <p class="copyright">Copyright © 2019 Cécile Huguet</p>
+    <p class="copyright">Copyright &copy; 2019 Cécile Huguet - All rights reserved</p>
   </footer>
 </body>
 </html>
