@@ -4,7 +4,7 @@
 
 // Reset
 
-html, body, p, h1, h2, h3, h4, ul {
+html, body, p, h1, h2, h3, h4, ul, figure {
   margin: 0;
 }
 
@@ -43,9 +43,14 @@ h3 {
 
 h4 {
   font-family: 'Europa';
-  color: $purple;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  color: $turquoise;
+  margin: 25px 0;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 22px;
+  }
 }
 
 a {
@@ -77,10 +82,15 @@ h1 {
   font-family: 'Europa Light';
 }
 
-// Main content
+// Header
 
 .row, nav {
   @include flex-center(row);
+}
+
+.wrap {
+  @include flex-center(row);
+  flex-wrap: wrap;
 }
 
 nav {
@@ -100,6 +110,7 @@ nav {
 
   a:not(.btn) {
     margin-left: 10px;
+    color: $turquoise;
 
     @media screen and (min-width: 1024px) {
       margin-left: 30px;
@@ -107,8 +118,8 @@ nav {
 
     &:hover {
       font-family: 'Europa';
-      color: $purple;
-      border-bottom: 2px solid $purple;
+      // color: $turquoise;
+      border-bottom: 2px solid $turquoise;
     }
   }
 
@@ -117,7 +128,9 @@ nav {
   }
 }
 
-.section, footer {
+// Main content
+
+section, footer {
   @include flex-center(column);
   padding: 45px 25px;
 
@@ -133,16 +146,16 @@ nav {
 
   .separator {
     width: 150px;
-    height: 4px;
-    border-radius: 5px;
-    background-color: $purple;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $turquoise;
     margin: 20px 0;
   }
 
   .section-content {
     @include flex-center(column);
-    max-width: 700px;
     margin: 0 auto;
+    max-width: 700px;
   }
 
   .section-title {
@@ -151,11 +164,15 @@ nav {
 }
 
 .colored-section, footer {
-  background-color: $purple;
+  background-color: $turquoise;
+
+  h3, p {
+    color: $darkGray;
+  }
 }
 
-.content {
-  max-width: 700px;
+.top-separator {
+  border-top: 1px solid $gray;
 }
 
 li {
@@ -169,28 +186,166 @@ li {
   }
 }
 
+// Projects
+
+#works .section-content {
+  max-width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: 900px;
+  }
+
+  .tags {
+    margin-bottom: 20px;
+
+    .tag {
+      margin: 0 10px 15px 10px;
+      padding: 3px 13px;
+      border: 1px solid $turquoise; // TODO: set another color
+      border-radius: 20px;
+
+      p {
+        font-size: 16px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $turquoise;
+
+        p {
+          color: $darkGray;
+          font-family: 'Europa';
+        }
+      }
+    }
+  }
+  
+  figure {
+    width: 100%;
+    margin-bottom: 20px;
+    @include flex-center(column);
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-end;
+    } 
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 30px;
+    }
+
+    > img {
+      height: 180px;
+      width: 100%;
+      background-color: $white;
+      border-radius: 12px;
+  
+      @media screen and (min-width: 375px) {
+        height: 215px;
+      }  
+      @media screen and (min-width: 425px) {
+        height: 250px;
+        width: 375px;
+      }  
+      @media screen and (min-width: 768px) {
+        height: 185px;
+        width: 280px;
+      }  
+      @media screen and (min-width: 1024px) {
+        height: 210px;
+        width: 315px;
+      }  
+      @media screen and (min-width: 1440px) {
+        height: 250px;
+        width: 375px;
+      }
+    }
+  
+    figcaption {
+      padding: 10px 0;
+
+      @media screen and (min-width: 768px) {
+        padding-left: 15px;
+        width: 49%;
+
+        p {
+          text-align: left;
+        }          
+      }
+      @media screen and (min-width: 768px) {
+        padding-left: 25px;
+      }
+      
+      p:first-child {
+        font-family: 'Europa';
+        border-bottom: 2px solid $turquoise;
+        margin-bottom: 10px;
+        font-size: 20px;
+
+        @media screen and (min-width: 768px) {
+          font-size: 24px;
+        }
+        @media screen and (min-width: 1440px) {
+          font-size: 28px;
+        }
+      }
+
+      .row, .wrap {
+        margin-top: 25px;
+        @media screen and (min-width: 768px) {
+          justify-content: flex-start;
+        }
+
+        a {
+          @include flex-center(row);
+          margin-right: 15px;
+          
+          .chevron-icon {
+            width: 16px;
+            height: 10px;  
+          }
+
+          .code-icon {
+            width: 20px;
+            height: 20px;   
+            margin-right: 7px;   
+          }
+  
+          &:hover {
+            cursor: pointer;
+            
+            p {
+              font-family: 'Europa';
+              color: $turquoise;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // Buttons
 
 .btn {
-  border: 2px solid $purple;
+  border: 2px solid $turquoise;
   border-radius: 40px;
   padding: 15px 40px;
-  color: $purple;
+  color: $turquoise;
   font-weight: bold;
   letter-spacing: 0.5px;
-
+  transition: background .5s ease;
+  
   @media screen and (min-width: 1024px) {
     font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $turquoise;
+    color: $darkGray;
   }
 }
 
 .btn:not(.small-btn) {
-  margin-top: 35px;
-}
-
-.btn:hover {
-  background-color: $purple;
-  color: $white;
+  margin-top: 70px;
 }
 
 .small-btn {
@@ -207,10 +362,10 @@ li {
 
 .icon-wrapper {
   margin: 0 10px;
-}
-
-.icon-wrapper:hover {
-  opacity: 0.5;
+  
+  &:hover {
+    opacity: 0.3;
+  }
 }
 
 .copyright {

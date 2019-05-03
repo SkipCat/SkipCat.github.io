@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "keywords": [
+    "portfolio",
+    "website",
+    "dev"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SkipCat/skipcat.github.io.git"
