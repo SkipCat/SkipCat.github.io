@@ -8,13 +8,30 @@ window.onload = function() {
 	var mobileFilter = document.querySelector('#mobile-filter');
 	var reactFilter = document.querySelector('#react-filter');
   var phpFilter = document.querySelector('#php-filter');
+  
+  var anchorLinks = document.querySelectorAll('a[href^="#"]');
+  
+  // Add smooth scroll behavior to anchor links
+  for (var i = 0; i < anchorLinks.length; i ++) {
+    anchorLinks[i].addEventListener('click', function (e) {
+      e.preventDefault();
 
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  function isHidden(value) {
+    return value.classList.contains('hidden');
+  }
+  
   // Hide containers when all projects inside are hidden
   function hideContainers() {
     for (var i = 0; i < worksContainers.length; i ++) {
-      const childrenProjects = Array.from(worksContainers[i].getElementsByTagName('figure'));
+      var childrenProjects = Array.from(worksContainers[i].getElementsByTagName('figure'));
       
-      if (childrenProjects.every(child => child.classList.contains('hidden'))) {
+      if (childrenProjects.every(isHidden)) {
         worksContainers[i].classList.add('hidden');
       } else {
         worksContainers[i].classList.remove('hidden');

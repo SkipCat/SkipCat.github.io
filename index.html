@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cécile Huguet | Full-stack developer</title>
+  <title>Cécile Huguet | Web & mobile JS developer</title>
+  <meta name="description" content="Personal website portfolio." />
   <link href="assets/main.css" rel="stylesheet">
-  <script type="text/javascript" src="assets/script.js"></script>
-  <!-- TODO: add favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header>
+  <header id="intro">
     <nav>
       <a href="assets/documents/cv.pdf" target="_blank" class="btn small-btn">
-        See resume
+        Resume
       </a>
       <a href="#about">About</a>
       <a href="#works">Works</a>
@@ -22,7 +23,7 @@
     <section>
       <h1>Cécile Huguet</h1>
       <div class="separator"></div>
-      <h2 class="subtitle">Full-Stack Web & Mobile JS Developer</h2>
+      <h2>Full-Stack Web & Mobile JS Developer</h2>
     </section>
   </header>
   <main>
@@ -40,26 +41,32 @@
           I read manga and heroic fantasy, and I also sing and dance.
         </p>
       </div>
+      <img src="assets/icons/earphones.svg" alt="earphones icon" id="earphones-icon" />
+      <img src="assets/icons/kimono.svg" alt="kimono icon" id="kimono-icon" />
+      <img src="assets/icons/sakura.svg" alt="flower icon" id="sakura-icon" />
+      <img src="assets/icons/cinema.svg" alt="cinema icon" id="cinema-icon" />
+      <img src="assets/icons/cat.svg" alt="cat icon" id="cat-icon" />
+      <img src="assets/icons/books.svg" alt="books icon" id="books-icon" />
     </section>
-    <section id="works-section">
+    <section id="works">
       <div class="section-content">
         <h3>My works</h3>
         <div class="wrap tags">
-          <span class="tag active-tag" id="all-filter">
+          <div class="tag active-tag" id="all-filter">
             <p>all</p>
-          </span>
-          <span class="tag" id="mobile-filter">
+          </div>
+          <div class="tag" id="mobile-filter">
             <p>mobile</p>
-          </span>
-          <span class="tag" id="web-filter">
+          </div>
+          <div class="tag" id="web-filter">
             <p>web</p>
-          </span>
-          <span class="tag" id="react-filter">
+          </div>
+          <div class="tag" id="react-filter">
             <p>React</p>
-          </span>
-          <span class="tag" id="php-filter">
+          </div>
+          <div class="tag" id="php-filter">
             <p>PHP</p>
-          </span>
+          </div>
         </div>
         <div class="works-wrapper" id="works-in-progress">
           <h4>Works in progress</h4>
@@ -76,7 +83,7 @@
               <p>Kali</p>
               <p>
                 Mobile app to find the cosmetics corresponding to your needs.
-                Built in React Native.
+                Built with React Native.
               </p>
             </figcaption>
           </figure>
@@ -93,11 +100,11 @@
               </p>
               <div class="wrap">
                 <a href="https://github.com/Krayorn/hackaton-cinema-front" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See front code</p>
                 </a>
                 <a href="https://github.com/AnthonySpault/hackathoncinema" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See back code</p>
                 </a>
               </div>
@@ -110,7 +117,7 @@
               <p>iOS app to play the game 'Guess what I'm thinking about'.</p>
               <div class="wrap">
                 <a href="https://github.com/SkipCat/GuessWhat" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See code</p>
                 </a>
               </div>
@@ -120,14 +127,17 @@
             <img src="assets/images/vr_project.png" alt="VR mini game" />
             <figcaption>
               <p>VR mini game</p>
-              <p>Small virtual reality adventure game in a Japanese landscape.</p>
+              <p>
+                Small virtual reality puzzle game set in a Japanese landscape.
+                Built with WebGL.
+              </p>
               <div class="wrap">
                 <a href="https://daffy-guarantee.glitch.me/" target="_blank">
-                  <img src="assets/icons/chevron.svg" class="chevron-icon" />
+                  <img src="assets/icons/chevron.svg" class="chevron-icon" alt="chevron icon" />
                   <p>Play now</p>
                 </a>
                 <a href="https://github.com/SkipCat/WebVR-Project" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See code</p>
                 </a>
               </div>
@@ -140,7 +150,7 @@
               <p>Refactoring of Mouv' radio website with ReactJS.</p>
               <div class="wrap">
                 <a href="https://www.mouv.fr/" target="_blank">
-                  <img src="assets/icons/chevron.svg" class="chevron-icon" />
+                  <img src="assets/icons/chevron.svg" class="chevron-icon" alt="chevron icon" />
                   <p>Visit website</p>
                 </a>
               </div>
@@ -156,26 +166,26 @@
               <p>Android app to create, edit and save drawings.</p>
               <div class="wrap">
                 <a href="https://github.com/SkipCat/LittleDraw" target="_blank">
-                  <img src="assets/icons/chevron.svg" class="chevron-icon" />
+                  <img src="assets/icons/chevron.svg" class="chevron-icon" alt="chevron icon" />
                   <p>See code</p>
                 </a>
               </div>
             </figcaption>
           </figure>
           <figure class="php">
-            <figcaption>
+            <figcaption class="no-image">
               <p>RPG manager</p>
               <p>
                 Utilitary to help create and play a role playing game, based on terminal interface.
-                Built in PHP.
+                Built with PHP.
               </p>
               <div class="wrap">
                 <a href="https://github.com/Krayorn/RPGManager" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See code</p>
                 </a>
                 <a href="https://github.com/Krayorn/MagicQuest" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See usage example</p>
                 </a>
               </div>
@@ -187,20 +197,20 @@
               <p>How to Vegan</p>
               <p>Website helping customers transform their traditional diet into a vegan diet.</p>
               <div class="wrap">
-                <a href="https://github.com/SkipCat/projet-transversal" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                <a href="https://github.com/SkipCat/how-to-vegan" target="_blank">
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See code</p>
                 </a>
               </div>
             </figcaption>
           </figure>
           <figure class="web php">
-            <figcaption>
+            <figcaption class="no-image">
               <p>Filer</p>
-              <p>Online file manager built in PHP.</p>
+              <p>Online file manager built with PHP.</p>
               <div class="wrap">
                 <a href="https://github.com/SkipCat/filer3" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See code</p>
                 </a>
               </div>
@@ -210,14 +220,17 @@
             <img src="assets/images/pokedex.png" alt="Pokedex" />
             <figcaption>
               <p>Pokedex</p>
-              <p>Full-CSS and Javascript online pokedex. You can search a pokemon by its name or its number.</p>
+              <p>
+                Full-CSS and Javascript online pokedex.
+                You can search a pokemon by its English name or its number.
+              </p>
               <div class="wrap">
                 <a href="http://skipcat.host-files.ovh/JavaScript/MyPokedex/" target="_blank">
-                  <img src="assets/icons/chevron.svg" class="code-icon" />
+                  <img src="assets/icons/chevron.svg" class="chevron-icon" alt="chevron icon" />
                   <p>Visit website</p>
                 </a>
                 <a href="https://github.com/SkipCat/my_pokedex" target="_blank">
-                  <img src="assets/icons/code.svg" class="code-icon" />
+                  <img src="assets/icons/code.svg" class="code-icon" alt="HTML icon" />
                   <p>See code</p>
                 </a>
               </div>
@@ -298,19 +311,30 @@
   <footer>
     <div class="row">
       <a href="https://github.com/SkipCat" target="_blank" class="icon-wrapper">
-        <img src="assets/icons/github.svg" class="icon" />
-      </a>
-      <a href="https://twitter.com/Cecile_Huguet" target="_blank" class="icon-wrapper">
-        <img src="assets/icons/twitter.svg" class="icon" />
+        <img src="assets/icons/github.svg" alt="GitHub icon" />
       </a>
       <a href="https://www.linkedin.com/in/cecile-huguet/" target="_blank" class="icon-wrapper">
-        <img src="assets/icons/linkedin.svg" class="icon" />
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn icon" />
+      </a>
+      <a href="https://twitter.com/Cecile_Huguet" target="_blank" class="icon-wrapper">
+        <img src="assets/icons/twitter.svg" alt="Twitter icon" />
       </a>
       <a href="mailto:cecilehuguet.contact@gmail.com" target="_blank" class="icon-wrapper">
-        <img src="assets/icons/email.svg" class="icon" />
+        <img src="assets/icons/email.svg" alt="email icon" />
       </a>
     </div>
-    <p class="copyright">Copyright &copy; 2019 Cécile Huguet - All rights reserved</p>
+    <div class="rights">
+      <p>Copyright &copy; 2019 Cécile Huguet. All rights reserved.</p>
+      <p>
+        Icons made by <a href="https://www.freepik.com/" target="_blank">Freepik</a>
+        from <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>
+        licensed by <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0 BY</a>.
+      </p>
+    </div>
+    <a href="#intro" class="icon-wrapper icon-scroll-up">
+      <img src="assets/icons/up-arrow.svg" alt="chevron icon" />
+    </a>
   </footer>
+  <script src="assets/script.min.js"></script>
 </body>
 </html>
