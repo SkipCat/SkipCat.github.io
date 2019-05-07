@@ -188,7 +188,7 @@ li {
 
 // Projects
 
-#works .section-content {
+#works-section .section-content {
   max-width: 100%;
   @media screen and (min-width: 768px) {
     max-width: 900px;
@@ -209,113 +209,120 @@ li {
 
       &:hover {
         cursor: pointer;
-        background-color: $turquoise;
+      }
+    }
 
-        p {
-          color: $darkGray;
-          font-family: 'Europa';
-        }
+    .tag:hover, .active-tag {
+      background-color: $turquoise;
+    
+      p {
+        color: $darkGray;
       }
     }
   }
-  
-  figure {
+
+  .works-wrapper {
     width: 100%;
-    margin-bottom: 20px;
-    @include flex-center(column);
+  }
+  
+}
+
+figure {
+  width: 100%;
+  margin-bottom: 20px;
+  @include flex-center(column);
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-end;
+  } 
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  > img {
+    height: 180px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 12px;
+
+    @media screen and (min-width: 375px) {
+      height: 215px;
+    }  
+    @media screen and (min-width: 425px) {
+      height: 250px;
+      width: 375px;
+    }  
+    @media screen and (min-width: 768px) {
+      height: 185px;
+      width: 280px;
+    }  
+    @media screen and (min-width: 1024px) {
+      height: 210px;
+      width: 315px;
+    }  
+    @media screen and (min-width: 1440px) {
+      height: 250px;
+      width: 375px;
+    }
+  }
+
+  figcaption {
+    padding: 10px 0;
 
     @media screen and (min-width: 768px) {
-      flex-direction: row;
-      align-items: flex-end;
-    } 
-    @media screen and (min-width: 1024px) {
-      margin-bottom: 30px;
-    }
+      padding-left: 15px;
+      width: 49%;
 
-    > img {
-      height: 180px;
-      width: 100%;
-      background-color: $white;
-      border-radius: 12px;
-  
-      @media screen and (min-width: 375px) {
-        height: 215px;
-      }  
-      @media screen and (min-width: 425px) {
-        height: 250px;
-        width: 375px;
-      }  
+      p {
+        text-align: left;
+      }          
+    }
+    @media screen and (min-width: 768px) {
+      padding-left: 25px;
+    }
+    
+    p:first-child {
+      font-family: 'Europa';
+      border-bottom: 2px solid $turquoise;
+      margin-bottom: 10px;
+      font-size: 20px;
+
       @media screen and (min-width: 768px) {
-        height: 185px;
-        width: 280px;
-      }  
-      @media screen and (min-width: 1024px) {
-        height: 210px;
-        width: 315px;
-      }  
+        font-size: 24px;
+      }
       @media screen and (min-width: 1440px) {
-        height: 250px;
-        width: 375px;
+        font-size: 28px;
       }
     }
-  
-    figcaption {
-      padding: 10px 0;
 
+    .row, .wrap {
+      margin-top: 25px;
       @media screen and (min-width: 768px) {
-        padding-left: 15px;
-        width: 49%;
-
-        p {
-          text-align: left;
-        }          
-      }
-      @media screen and (min-width: 768px) {
-        padding-left: 25px;
-      }
-      
-      p:first-child {
-        font-family: 'Europa';
-        border-bottom: 2px solid $turquoise;
-        margin-bottom: 10px;
-        font-size: 20px;
-
-        @media screen and (min-width: 768px) {
-          font-size: 24px;
-        }
-        @media screen and (min-width: 1440px) {
-          font-size: 28px;
-        }
+        justify-content: flex-start;
       }
 
-      .row, .wrap {
-        margin-top: 25px;
-        @media screen and (min-width: 768px) {
-          justify-content: flex-start;
+      a {
+        @include flex-center(row);
+        margin-right: 15px;
+        
+        .chevron-icon {
+          width: 16px;
+          height: 10px;  
         }
 
-        a {
-          @include flex-center(row);
-          margin-right: 15px;
+        .code-icon {
+          width: 20px;
+          height: 20px;   
+          margin-right: 7px;   
+        }
+
+        &:hover {
+          cursor: pointer;
           
-          .chevron-icon {
-            width: 16px;
-            height: 10px;  
-          }
-
-          .code-icon {
-            width: 20px;
-            height: 20px;   
-            margin-right: 7px;   
-          }
-  
-          &:hover {
-            cursor: pointer;
-            
-            p {
-              font-family: 'Europa';
-              color: $turquoise;
-            }
+          p {
+            font-family: 'Europa';
+            color: $turquoise;
           }
         }
       }
@@ -370,4 +377,8 @@ li {
 
 .copyright {
   margin-top: 45px;
+}
+
+.hidden {
+  display: none;
 }
